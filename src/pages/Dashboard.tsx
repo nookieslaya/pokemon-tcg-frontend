@@ -25,7 +25,9 @@ import { useAuth } from "../hooks/useAuth";
 import { buildPokemonQuery } from "../lib/pokemonQuery";
 import type { Card, CollectionCard } from "../types/pokemon";
 
-const apiBase = import.meta.env.VITE_API_URL || "http://localhost:3000";
+const apiBase =
+  (import.meta.env.VITE_API_URL as string | undefined) ??
+  (import.meta.env.DEV ? "http://localhost:3000" : "");
 const apiKey = import.meta.env.VITE_POKEMON_API_KEY as string | undefined;
 
 const Dashboard = () => {

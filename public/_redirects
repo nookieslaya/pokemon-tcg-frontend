@@ -1,0 +1,2 @@
+/api/*  http://srv50.mikr.us:40233/api/:splat  200!
+/*  /index.html  200

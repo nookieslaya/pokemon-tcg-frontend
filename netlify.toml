@@ -4,11 +4,11 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  VITE_API_URL = "/api"
+  VITE_API_URL = "https://pokemontcgcol.netlify.app"
 
 [[redirects]]
   from = "/api/*"
-  to = "http://srv50.mikr.us:40233/:splat"
+  to = "http://srv50.mikr.us:40233/api/:splat"
   status = 200
   force = true
 
